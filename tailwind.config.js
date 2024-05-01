@@ -9,9 +9,6 @@ export default {
     extend: {},
   },
   plugins: [],
-}
-
-module.exports = {
     prefix: 'tw-',
     important: true,
 }
