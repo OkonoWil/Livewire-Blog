@@ -7,6 +7,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('auth')->group(function(){
-    Route::get('register', \App\Livewire\Auth\Register::class)->name('register');
-//    Route::get('login', \App\Livewire\Auth\Register::class)->name('login');
+    Route::middleware('guest')->group(function(){
+        Route::get('register', \App\Livewire\Auth\Register::class)->name('register');
+        Route::get('login', \App\Livewire\Auth\Login::class)->name('login');
+    });
 });
