@@ -9,14 +9,14 @@
             <h2 class="card-title text-center mb-4">S'inscrire</h2>
             <div class="mb-3">
                 <label class="form-label" for="name">Nom</label>
-                <input type="text" class="form-control" wire:model="form.name" id="name" placeholder="Nom">
+                <input type="text" class="form-control" wire:model.live="form.name" id="name" placeholder="Nom">
                 @error('form.name')
                     <span class="tw-text-red-500 tw-text-sm">{{$message}}</span>
                 @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label" for="email">Email</label>
-                <input type="email" class="form-control" wire:model="form.email" id="email" placeholder="Email">
+                <input type="email" class="form-control" wire:model.blur="form.email" id="email" placeholder="Email">
                 @error('form.email')
                     <span class="tw-text-red-500 tw-text-sm">{{$message}}</span>
                 @enderror

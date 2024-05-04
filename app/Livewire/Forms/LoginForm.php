@@ -7,7 +7,7 @@ use Livewire\Form;
 
 class LoginForm extends Form
 {
-    #[Validate('required|string|email|exists:users,email')]
+    #[Validate('required|string|email')]
     public string $email;
 
     #[Validate('required|string|min:6')]

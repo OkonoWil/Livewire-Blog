@@ -8,13 +8,20 @@ use Livewire\Component;
 class Login extends Component
 {
     public LoginForm $form;
+    public string $error;
 
     public function login(){
-        $this->form->login();
-        return redirect()->intended();
+        if ($this->form->login())
+        {
+            return redirect()->intended();
+        }
+        $this->error = ''
+        return redirect()->back();
     }
     public function render()
     {
-        return view('livewire.auth.login');
+        return view('livewire.auth.login')
+            ->title('Se connecter' . ' - ' . config('app.name'))
+            ->layoutData(['description' => 'Se connecter sur ' . config('app.name')]);
     }
 }
