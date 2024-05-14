@@ -28,7 +28,8 @@ class ForgetPassword extends Component
             DB::table('password_reset_tokens')->where('email', $this->email)->delete();
             DB::table('password_reset_tokens')->insert([
                 'email' => $this->email,
-                'token' => $token
+                'token' => $token,
+                'created_at' => now()
             ]);
         }catch (\Exception $e) {
             DB::rollBack();

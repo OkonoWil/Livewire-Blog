@@ -9,6 +9,11 @@
             {{session('success')}}
         </div>
     @endif
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{session('error')}}
+        </div>
+    @endif
     <form class="card card-md" wire:submit="store" autocomplete="off" novalidate>
         <div class="card-body">
             <h2 class="card-title text-center mb-4">Mot de passe oublier</h2>

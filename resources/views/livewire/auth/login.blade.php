@@ -2,6 +2,11 @@
     <div class="text-center mb-4">
         <a href="/" class="navbar-brand navbar-brand-autodark"><img src="{{Vite::asset('resources/static/logo.svg')}}" class="tw-h-32 tw-w-60" alt="Logo"></a>
     </div>
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+    @endif
     <div class="card tw-min-w-max">
         <div class="card-body">
             <h2 class="h2 text-center mb-4">Se connecter à votre compte</h2>

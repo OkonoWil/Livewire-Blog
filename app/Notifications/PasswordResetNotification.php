@@ -38,7 +38,7 @@ class PasswordResetNotification extends Notification
                     ->greeting('Salut ' . $notifiable->name)
                     ->subject('Réinitialisation de votre mot de passe')
                     ->line('Veuillez cliquer sur le bouton ci-dessous pour réinitialiser votre mot de passe!')
-                    ->action('Réinitialiser', url('/reset-password', $this->token))
+                    ->action('Réinitialiser', route('reset-password', ['token' => $this->token, 'email' => $this->email]))
                     ->salutation('L\'équipe '. config('app.name'));
     }
 
