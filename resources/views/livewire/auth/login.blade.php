@@ -12,12 +12,15 @@
                     @error('form.email')
                         <span class="tw-text-red-500 tw-text-sm">{{$message}}</span>
                     @enderror
+                    @if($error)
+                        <span class="tw-text-red-500 tw-text-sm">{{$error}}</span>
+                    @endif
                 </div>
                 <div class="mb-2">
                     <label class="form-label">
                         Mot de passe
                         <span class="form-label-description">
-                            <a href="./forgot-password.html">Mot de passe oubliez</a>
+                            <a href="{{route('forget-password')}}">Mot de passe oubliez</a>
                         </span>
                     </label>
                     <div class="input-group input-group-flat">

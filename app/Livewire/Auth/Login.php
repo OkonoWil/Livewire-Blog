@@ -11,11 +11,12 @@ class Login extends Component
     public string $error;
 
     public function login(){
+        $this->error = "";
         if ($this->form->login())
         {
             return redirect()->intended();
         }
-        $this->error = ''
+        $this->error = 'Email ou mot de passe invalide';
         return redirect()->back();
     }
     public function render()
