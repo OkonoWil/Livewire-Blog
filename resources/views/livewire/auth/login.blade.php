@@ -1,7 +1,5 @@
 <div class="container container-tight py-4">
-    <div class="text-center mb-4">
-        <a href="/" class="navbar-brand navbar-brand-autodark"><img src="{{Vite::asset('resources/static/logo.svg')}}" class="tw-h-32 tw-w-60" alt="Logo"></a>
-    </div>
+    <x-logo/>
     @if(session('success'))
         <div class="alert alert-success">
             {{session('success')}}

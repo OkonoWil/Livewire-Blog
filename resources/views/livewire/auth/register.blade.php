@@ -1,9 +1,5 @@
 <div class="container container-tight py-4">
-    <div class="text-center mb-4">
-        <a href="/" class="navbar-brand navbar-brand-autodark">
-            <img src="{{Vite::asset('resources/static/logo.svg')}}" alt="Logo" class="tw-h-32 tw-w-60">
-        </a>
-    </div>
+    <x-logo/>
     <form class="card card-md" wire:submit="save" autocomplete="off" novalidate>
         <div class="card-body">
             <h2 class="card-title text-center mb-4">S'inscrire</h2>
