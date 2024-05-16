@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -38,6 +39,11 @@ class Post extends Model
     public function getRouteKeyName() : string
     {
         return 'slug';
+    }
+
+    public function scopePublished(Builder $query): void
+    {
+        $query->where('status', self::STATUS_PUBLISHED);
     }
 
     public function user(): BelongsTo

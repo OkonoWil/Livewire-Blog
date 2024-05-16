@@ -4,9 +4,11 @@ namespace App\Livewire\Users;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class UserList extends Component
 {
+    use WithPagination;
     public string $search = '';
     public function render()
     {
