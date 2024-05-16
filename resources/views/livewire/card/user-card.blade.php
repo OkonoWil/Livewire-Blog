@@ -1,7 +1,7 @@
 <div>
     <div class="card">
         <div class="card-body p-4 text-center">
-            <span class="avatar avatar-xl mb-3 rounded">JL</span>
+            <span class="avatar avatar-xl mb-3 rounded">{{getInitials($user->name)}}</span>
             <h3 class="m-0 mb-1"><a href="#">{{$user->name}}</a></h3>
             <div class="text-muted">{{$user->email}}</div>
 
