@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 //        $this->call([CategorySeeder::class,]);
-        User::factory(20)->has(Post::factory()->count(rand(5, 10)))->create();
+        User::factory(20)->has(Post::factory()->count(rand(5, 10))->hasPhotos(rand(2,5)))->create();
 
         User::factory()->create([
             'name' => 'Test User',
