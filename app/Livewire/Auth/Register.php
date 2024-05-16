@@ -16,7 +16,7 @@ class Register extends Component
     public function render()
     {
         return view('livewire.auth.register')
-            ->title('S\'inscrire' . ' - ' . config('app.name'))
+            ->title('S\'inscrire')
             ->layoutData(['description' => 'S\'inscrire sur ' . config('app.name')]);
     }
 

@@ -4,9 +4,11 @@ namespace App\Livewire\Auth;
 
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
+#[Layout('components.layouts.auth')]
 class Reset extends Component
 {
     public string $token;

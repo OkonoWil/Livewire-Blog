@@ -6,9 +6,11 @@ use App\Models\User;
 use App\Notifications\PasswordResetNotification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
+#[Layout('components.layouts.auth')]
 class ForgetPassword extends Component
 {
     #[Validate('required|email|exists:users,email')]

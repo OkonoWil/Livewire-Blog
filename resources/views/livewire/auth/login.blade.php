@@ -1,5 +1,7 @@
 <div class="container container-tight py-4">
-    <x-logo/>
+    <div class="text-center mb-4">
+        <x-logo />
+    </div>
     @if(session('success'))
         <div class="alert alert-success">
             {{session('success')}}

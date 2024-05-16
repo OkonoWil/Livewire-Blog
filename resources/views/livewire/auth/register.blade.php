@@ -1,5 +1,7 @@
 <div class="container container-tight py-4">
-    <x-logo/>
+    <div class="text-center mb-4">
+        <x-logo />
+    </div>
     <form class="card card-md" wire:submit="save" autocomplete="off" novalidate>
         <div class="card-body">
             <h2 class="card-title text-center mb-4">S'inscrire</h2>
